@@ -1,0 +1,7 @@
+1. setup default page and folder setting
+2. Create git repo
+3. create navbar
+4. create landing page slider
+5. create landing page pagination
+6. create single article page
+7. create comment
