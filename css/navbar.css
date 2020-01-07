@@ -1,0 +1,93 @@
+.collapse {
+    margin-bottom: 20px;
+}
+
+.top-navbar {
+    border-bottom: 1px solid #cecccc;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 5px;
+    margin-bottom: 20px;
+
+}
+
+.top-navbar-text {
+    border: 1px solid #00acee;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    font-size: 14px;
+}
+
+.date {
+    font-weight: 600;
+}
+
+.social-media {
+    font-size: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-facebook-square {
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.fa-twitter-square {
+    color: #00acee;
+    cursor: pointer;
+}
+
+.fa-instagram {
+    color: #E1306C;
+    cursor: pointer;
+}
+
+.top-navbar-dropdown {
+    /* margin-left: auto; */
+}
+
+.first {
+    display: none;
+}
+
+.navbar-dark {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.navbar-link {
+    /* margin: 0 auto; */
+    font-size: 13px;
+}
+
+.navbar-link ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -15px;
+
+}
+
+.navbar-link ul li:hover {
+    color: #ff7200;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.logo {
+    font-size: 22PX;
+    color: #1875F0;
+    font-family: Roboto;
+}
+
+.logo:hover {
+    transform: none;
+
+}
+
+/* end of navbar */
