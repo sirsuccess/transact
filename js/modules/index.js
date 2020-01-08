@@ -85,6 +85,13 @@ export function RedirectFuntion(destination) {
   return (window.location.href = destination);
 }
 
-
+export function SetStorage(name, value) {
+  //get id from session storage
+  return sessionStorage.setItem(name, value);
+}
+export function getStorage(name) {
+  //get id from session storage
+  return sessionStorage.getItem();
+}
 
 
