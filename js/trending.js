@@ -17,6 +17,8 @@ const trendImgText = getElement("#trendImgText");
 const trendingCardBody = getElement(".trend-card-body");
 const sliderLoader = getElement(".slider-loader");
 const trendNavigation = getElement(".trend-navigation");
+
+
 let startIndex = 0;
 
 export default function Trending() {
@@ -24,6 +26,7 @@ export default function Trending() {
     "http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article?page=8&limit=5"
   )
     .then(data => {
+      
       DisplayBlock(trendNavigation);
       DisplayNone(sliderLoader);
       setImageAttribute(slideImage, data[startIndex].avatar);
@@ -49,9 +52,6 @@ export default function Trending() {
           trendImgText.innerHTML = data[startIndex].title;
         });
       });
-
-     
-      
 
       let imageLength = data.length;
       //click event for forwrd button

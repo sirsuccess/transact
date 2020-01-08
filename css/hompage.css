@@ -109,7 +109,8 @@
 
 
 
-.slider-loader {
+.slider-loader,
+.latest-loader {
     border: 10px solid #f3f3f3;
     border-radius: 50%;
     border-top: 10px solid #3498db;
@@ -142,3 +143,136 @@
 }
 
 /* end of trending section */
+
+.latest-article-section {
+    margin: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.latest-article-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.add-article {
+    border: 1px solid #1875f0;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 20px;
+    color: #1875f0;
+    width: 100px;
+    /* margin: auto; */
+    /* margin-top: 2.5em; */
+    cursor: pointer;
+}
+
+.add-article:hover {
+    border: 1px solid #27ae60;
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.latest-article-body {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start; */
+}
+
+.latest-article-card {
+    width: 60%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: auto;
+    border: 1px solid #1875f0;
+    align-items: center;
+}
+
+.latest-article-card-img {
+    width: 180px;
+    height: 180px;
+    /* height: 100%; */
+    margin-right: 30px;
+}
+
+.latest-article-card-details {
+    display: flex;
+    margin-top: 2em;
+    color: #cecccc;
+}
+
+.latest-article-card-title {
+    /* margin-top: 2em; */
+}
+
+
+
+.fa-trash {
+    font-size: 25px;
+    color: rgb(247, 9, 9);
+    margin-left: auto;
+    /* position: relative;
+    top: 0;
+    left: 00; */
+}
+
+.views,
+.comments {
+    margin-right: 2em;
+}
+
+.article-category {
+    border: 1px solid #1875f0;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 20px;
+    color: #1875f0;
+    width: 100px;
+    margin: auto;
+    margin-top: 2.5em;
+}
+
+.article-category:hover {
+    background-color: #1875f0;
+    color: #fff;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    margin-right: auto;
+    margin-top: 1em;
+    color: #fff;
+}
+
+#back {
+    margin-right: 0.5em;
+}
+
+.front {
+    margin-left: 0.5em;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* width: 300px; */
+    /* align-items: center; */
+}
+
+.listLI {
+    background-color: #fff;
+    border: 1px solid #1875f0;
+    padding: 0.5em;
+    cursor: pointer;
+    color: #1875f0;
+}
+
+/* end of trending */
