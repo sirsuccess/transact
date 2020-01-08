@@ -13,7 +13,7 @@ import {
   //toggle modal
   // DisplayNone(modal);
 
-  export default function ModalToggle(params) {
+  export default function ModalToggle() {
     clickEvent(cancelCircle, () => {
         DisplayNone(modal);
       });
