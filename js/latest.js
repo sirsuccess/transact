@@ -13,6 +13,7 @@ import Pagination from "./pagination.js";
 //global Variable
 const latestArticle = getElement(".latest-article-body");
 const latestLoader = getElement(".latest-loader");
+// const faTrash = getElement(".fa-trash");
 
 export default function Trending() {
   asyncGetArticles(
@@ -37,6 +38,7 @@ export default function Trending() {
 
 function displayLatestArticle(data) {
   Pagination(data).forEach((item, index) => {
+    let faTrash = getElement(".fa-trash");
     const li = createNode("li");
     let listItems = `<div class="latest-article-card" id=clickRedirect>
   
@@ -59,5 +61,9 @@ function displayLatestArticle(data) {
 
     li.innerHTML = listItems;
     append(latestArticle, li);
+
+    clickEvent(li, () => {
+      console.log("i'm trash, so happy", item.id);
+    });
   });
 }

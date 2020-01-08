@@ -57,7 +57,7 @@ export default function Trending() {
         });
       });
 
-      console.log("id arr", IdArray);
+    
 
       //click event to set session storage and redirect
 
