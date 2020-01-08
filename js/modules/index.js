@@ -67,8 +67,6 @@ export function getCurrentDate() {
   return today;
 }
 
-
-
 /**
  *get  all articles;
  *
@@ -91,7 +89,5 @@ export function SetStorage(name, value) {
 }
 export function getStorage(name) {
   //get id from session storage
-  return sessionStorage.getItem();
+  return sessionStorage.getItem(name);
 }
-
-

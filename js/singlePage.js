@@ -7,7 +7,8 @@ import createNode, {
   setInnerHTML,
   DisplayBlock,
   getCurrentDate,
-  asyncGetArticles
+  asyncGetArticles,
+  getStorage
   //   displayArticle
 } from "./modules/index.js";
 
@@ -17,11 +18,12 @@ const setImg = getElement("#sliderImg");
 const sliderText = getElement(".slider-text");
 
 
+
 //date output
 setInnerHTML(date, getCurrentDate());
 
 //get id from session storage
-let id = sessionStorage.getItem("articleID");
+let id = getStorage("articleID");
 
 asyncGetArticles(
   `http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
