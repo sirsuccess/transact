@@ -286,7 +286,7 @@
     bottom: 0;
     background-color: rgba(26, 24, 24, 0.5);
     z-index: 5000;
-    /* display: none; */
+    display: none;
 
 }
 
@@ -301,7 +301,7 @@
     /* width: 60%; */
     max-width: 900px;
     margin: auto;
-    box-shadow: 0px 2px  5px  rgb(147, 231, 126);
+    box-shadow: 0px 2px 5px rgb(147, 231, 126);
 }
 
 .create-form-img {
