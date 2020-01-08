@@ -2,15 +2,24 @@
     width: 100%;
     display: flex;
     margin-top: 50px;
+
+
 }
 
 .trending-img {
     width: 70%;
     height: 500px;
-    background-image: url("../assets/imgs/church.png");
+    /* background-image: url("../assets/imgs/church.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     margin-right: 2em;
+
+}
+
+.trending-img img {
+    border-radius: 2px;
+    opacity: 0.99;
+    filter: invert(5%);
 }
 
 .treding-img-details {
@@ -21,6 +30,12 @@
     margin: auto;
     text-align: center;
     color: #fff;
+}
+
+.trend-img-text {
+    letter-spacing: 1px;
+    font-weight: 800;
+    /* color: #1875f0; */
 }
 
 .trend-img-btn {
@@ -60,15 +75,15 @@
 }
 
 .trend-card-img {
-    width: 55px;
+    width: 69px;
     margin: 0 1em;
 }
 
 .trend-navigation {
     display: flex;
-    width: 100px;
+    width: 200px;
     justify-content: space-between;
-
+    display: none;
     margin: auto;
     margin-top: 20px;
 }
@@ -79,6 +94,10 @@
 .front {
     font-size: 30px;
     color: #1875f0;
+}
+
+#backward {
+    margin-right: 2em;
 }
 
 #backward:disabled,
@@ -92,6 +111,40 @@
 .fa-chevron-circle-left,
 .fa-chevron-circle-right {
     cursor: pointer;
+}
+
+
+
+.slider-loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* end of trending section */
