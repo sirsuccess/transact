@@ -30,6 +30,7 @@ export default function Trending() {
       DisplayBlock(trendNavigation);
       DisplayNone(sliderLoader);
       setImageAttribute(slideImage, data[startIndex].avatar);
+      trendImgText.innerHTML = data[startIndex].title;
       data.forEach((item, index) => {
         const li = createNode("li");
         let listItems = `<div class="trend-card">
