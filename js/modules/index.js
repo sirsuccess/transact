@@ -67,6 +67,8 @@ export function getCurrentDate() {
   return today;
 }
 
+
+
 /**
  *get  all articles;
  *
@@ -78,3 +80,11 @@ export async function asyncGetArticles(url) {
   const jsonData = await response.json();
   return jsonData;
 }
+
+export function RedirectFuntion(destination) {
+  return (window.location.href = destination);
+}
+
+
+
+
