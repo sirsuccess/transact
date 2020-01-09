@@ -57,13 +57,22 @@ export default function Trending() {
         });
       });
 
-    
+      let interval = setInterval(() => {
+        if (startIndex < data.length - 1) {
+          startIndex += 1;
+          // index = startIndex;
+          clickRedirect.setAttribute("id", IdArray[startIndex]);
+          setImageAttribute(slideImage, data[startIndex].avatar);
+          trendImgText.innerHTML = data[startIndex].title;
+          backward.disabled = false;
+          forward.disabled = false;
+        } else {
+          startIndex = -1;
+        }
+      }, 6000);
 
       //click event to set session storage and redirect
-
       clickEvent(clickRedirect, () => {
-        // console.log("hello abot to redirect");
-        // console.log(startIndex);
         SetStorage("articleID", IdArray[startIndex]);
         return RedirectFuntion("./single-article.html");
       });

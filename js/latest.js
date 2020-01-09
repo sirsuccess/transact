@@ -21,23 +21,15 @@ export default function Trending() {
   )
     .then(data => {
       DisplayNone(latestLoader);
-      function setCurrentPage(data) {
-        // currentPage = pageNo;
-        displayLatestArticle(data);
-        // return currentPage;
-      }
-
-      //   setCurrentPage(data);
-      displayLatestArticle(data);
-      //   console.log(pageNumbers);
+      Pagination(data)
     })
     .catch(err => {
       console.log(err);
     });
 }
 
-function displayLatestArticle(data) {
-  Pagination(data).forEach((item, index) => {
+export function displayLatestArticle(data) {
+  data.forEach((item, index) => {
     let faTrash = getElement(".fa-trash");
     const li = createNode("li");
     let listItems = `<div class="latest-article-card" id=clickRedirect>
