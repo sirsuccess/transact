@@ -9,7 +9,7 @@ const front = getElement("#front");
 
 export default function Pagination(data) {
   let currentPage = 5;
-  let dataPerPage = 4;
+  let dataPerPage = 10;
   const setCurrentPage = currentPage => {
     const indexOfLastData = currentPage * dataPerPage;
     const indexOfFirstData = indexOfLastData - dataPerPage;
@@ -24,7 +24,7 @@ export default function Pagination(data) {
   for (let i = 1; i <= totalNumberOfpage; i++) {
     pageNumbers.push(i);
   }
-  // consol.log(currentTableData);
+
   //front and back movement
   clickEvent(back, () => {
     let latestArticle = getElement(".latest-article-body");
@@ -32,6 +32,7 @@ export default function Pagination(data) {
       back.disabled = false;
       front.disabled = false;
       currentPage -= 1;
+      //remove previous data
       while (latestArticle.firstChild) {
         latestArticle.removeChild(latestArticle.firstChild);
       }
@@ -46,6 +47,7 @@ export default function Pagination(data) {
       back.disabled = false;
       front.disabled = false;
       currentPage += 1;
+      //remove previous data
       while (latestArticle.firstChild) {
         latestArticle.removeChild(latestArticle.firstChild);
       }
@@ -56,17 +58,16 @@ export default function Pagination(data) {
     console.log("i am here front", currentPage);
   });
 
-  // displayLatestArticle(setCurrentPage(currentPage))
-  pageNumLI(pageNumbers, setCurrentPage);
-  setCurrentPage(currentPage);
+  paginationNum(pageNumbers, setCurrentPage);
+  return setCurrentPage(currentPage);
 }
 
 /**
- * handle pagination number
+ * handle pagination numbering
  * @param: pageNumbers
  * @funtion: setCurrentPage
  */
-function pageNumLI(pageNumbers, setCurrentPage) {
+function paginationNum(pageNumbers, setCurrentPage) {
   pageNumbers.map(number => {
     let li = createNode("li");
     li.className = "listLI";
@@ -74,6 +75,7 @@ function pageNumLI(pageNumbers, setCurrentPage) {
       back.disabled = false;
       front.disabled = false;
       const latestArticle = getElement(".latest-article-body");
+      //remove previous data
       while (latestArticle.firstChild) {
         latestArticle.removeChild(latestArticle.firstChild);
       }
