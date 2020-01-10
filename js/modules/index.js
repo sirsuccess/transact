@@ -20,6 +20,9 @@ export function setImageAttribute(element, imgDir) {
 export function DisplayNone(target) {
   target.style.display = "none";
 }
+export function DisplayFlex(target) {
+  target.style.display = "flex";
+}
 
 export function setInnerHTML(target, value) {
   target.innerHTML = value;
@@ -90,4 +93,27 @@ export function SetStorage(name, value) {
 export function getStorage(name) {
   //get id from session storage
   return sessionStorage.getItem(name);
+}
+
+export async function DeleteFetch(url) {
+  return await fetch(url, {
+    method: "DELETE",
+    headers: { "content-type": "application/json" }
+    // body: JSON.stringify(id)
+  });
+}
+export async function EditFetch(url, body) {
+  return await fetch(url, {
+    method: "DELETE",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body)
+  });
+}
+
+
+//get date from date
+export function getDateTime(dataString){
+  let today = new Date(dataString);
+  let fullDate = today.toString().split(" ").slice(0,5).join();
+  return fullDate;
 }
