@@ -114,6 +114,12 @@
 
 .fa-trash {
     color: red;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.fa-edit {
+    cursor: pointer;
 }
 
 .add-comment {
@@ -151,11 +157,12 @@ textarea {
 
 
 @media screen and (max-width: 670px) {
-    .comment-section{
+    .comment-section {
         padding: 0;
         width: 100%;
 
     }
+
     .comments-head {
         display: flex;
         align-items: center;
@@ -166,7 +173,7 @@ textarea {
         margin: 0 auto
     }
 
-     .slider-card {
+    .slider-card {
         width: 90%;
         margin: 0 auto;
     }
