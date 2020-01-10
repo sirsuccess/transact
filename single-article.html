@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/37baf9b0f1.js"></script>
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/single-article.css">
     <title>Tranzact Article</title>
 </head>
@@ -177,6 +178,31 @@
             </div>
 
         </section>
+    </div>
+    <!-- end of comment -->
+    <div class="modal">
+        <div class="create-form">
+            <div class="create-form-img">
+                <img src="./assets/imgs/formImg.jpg" alt="form image">
+            </div>
+            <form action="./single-article.html" method="post">
+                <h3>Create Article</h3>
+                <div class="input-div"><label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="" autofocus placeholder="Article Title">
+                </div>
+                <div class="input-div">
+                    <label for="avatar">select Image</label>
+                    <input type="file" name="avatar" id="avatar" accept=".jpg, .png, .jpeg">
+
+                </div>
+                <div class="input-div">
+                    <label for="url">Article Link</label>
+                    <input type="text" name="url" id="url" value="" placeholder="Article URL">
+                </div>
+                <button class="submit-btn">Post</button>
+            </form>
+            <div class="cancel-circle">X</div>
+        </div>
     </div>
     <script type="module" defer src="./js/singlePage.js"></script>
 </body>
