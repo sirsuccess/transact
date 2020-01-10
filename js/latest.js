@@ -1,19 +1,18 @@
 import createNode, {
   getElement,
   clickEvent,
-  setImageAttribute,
   asyncGetArticles,
   append,
   DisplayNone,
-  DisplayBlock,
-  DisplayInline
+  getDateTime,
+  RedirectFuntion,
+  SetStorage
 } from "./modules/index.js";
 import Pagination from "./pagination.js";
 
 //global Variable
 const latestArticle = getElement(".latest-article-body");
 const latestLoader = getElement(".latest-loader");
-// const faTrash = getElement(".fa-trash");
 
 export default function Trending() {
   asyncGetArticles(
@@ -21,7 +20,7 @@ export default function Trending() {
   )
     .then(data => {
       DisplayNone(latestLoader);
-      Pagination(data)
+      Pagination(data);
     })
     .catch(err => {
       console.log(err);
@@ -38,24 +37,25 @@ export function displayLatestArticle(data) {
               <img src=${item.avatar} alt="photo">
           </div>
           <div class="latest-article-card-title">
-              ${item.title} 
+              <span class="latest-text">${item.title} </span>
               <div class="latest-article-card-details">
                   Views: <div class="views">
                       180,111
                   </div>
                   Comments: <div class="comments"> 87 </div> 
-                  Posted: ${item.createdAt}
+                  Posted: ${getDateTime(item.createdAt)}
               </div>
               
               <div class="article-category">View</div>
-              <i class="fa fa-trash"></i>
           </div>`;
 
     li.innerHTML = listItems;
     append(latestArticle, li);
 
+    //click event to set session storage and redirect
     clickEvent(li, () => {
-      console.log("i'm trash, so happy", item.id);
+      SetStorage("articleID", item.id);
+      return RedirectFuntion("./single-article.html");
     });
   });
 }

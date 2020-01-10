@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/37baf9b0f1.js"></script>
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/single-article.css">
     <title>Tranzact Article</title>
 </head>
@@ -45,6 +46,16 @@
 
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="mobileNav">
+                    <a href="/index.html">
+                        <div class="logo second">
+                            Tranzact Article
+                        </div>
+                    </a>
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+
 
                 <div class="navbar-link">
                     <ul class="navbar-nav">
@@ -76,11 +87,35 @@
                             <a href="#">FITNESS</a>
                         </li>
                     </ul>
+
                     <!-- end of navbar-link -->
                 </div>
+
                 <!-- end of navbar -->
             </div>
+
         </nav>
+        <ul class="mobile-dropdown">
+            <li>
+                <a href="/index.html">HOME</a>
+            </li>
+            <li>
+                <a href="#">LATEST</a>
+            </li>
+            <li>
+                <a href="#">SCIENCE</a>
+            </li>
+            <li>
+                <a href="#">ENTERTAINMENT</a>
+            </li>
+            <li>
+                <a href="#">LIFESTYLE</a>
+            </li>
+            <li>
+                <a href="#">FITNESS</a>
+            </li>
+        </ul>
+        <!-- end of navbar -->
         <!-- end of navbar -->
         <section class="slider">
             <div class="slider-card">
@@ -89,6 +124,10 @@
                 </div>
                 <div class="slider-text">
                     Saraki in the house
+                </div>
+                <div class="icons">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash"></i>
                 </div>
             </div>
 
@@ -139,6 +178,31 @@
             </div>
 
         </section>
+    </div>
+    <!-- end of comment -->
+    <div class="modal">
+        <div class="create-form">
+            <div class="create-form-img">
+                <img src="./assets/imgs/formImg.jpg" alt="form image">
+            </div>
+            <form action="./single-article.html" method="post">
+                <h3>Create Article</h3>
+                <div class="input-div"><label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="" autofocus placeholder="Article Title">
+                </div>
+                <div class="input-div">
+                    <label for="avatar">select Image</label>
+                    <input type="file" name="avatar" id="avatar" accept=".jpg, .png, .jpeg">
+
+                </div>
+                <div class="input-div">
+                    <label for="url">Article Link</label>
+                    <input type="text" name="url" id="url" value="" placeholder="Article URL">
+                </div>
+                <button class="submit-btn">Post</button>
+            </form>
+            <div class="cancel-circle">X</div>
+        </div>
     </div>
     <script type="module" defer src="./js/singlePage.js"></script>
 </body>

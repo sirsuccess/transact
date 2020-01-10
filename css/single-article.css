@@ -112,6 +112,15 @@
 }
 
 
+.fa-trash {
+    color: red;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.fa-edit {
+    cursor: pointer;
+}
 
 .add-comment {
     margin-top: 5rem;
@@ -143,4 +152,29 @@ textarea {
     background-color: #1875F0;
     border-radius: 18px;
     margin-left: auto;
+}
+
+
+
+@media screen and (max-width: 670px) {
+    .comment-section {
+        padding: 0;
+        width: 100%;
+
+    }
+
+    .comments-head {
+        display: flex;
+        align-items: center;
+        /* padding: 2em; */
+        font-weight: 800;
+        font-size: 20px;
+        width: 60%;
+        margin: 0 auto
+    }
+
+    .slider-card {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
