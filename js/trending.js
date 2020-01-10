@@ -57,6 +57,7 @@ export default function Trending() {
         });
       });
 
+      //handle trending image changing
       let interval = setInterval(() => {
         if (startIndex < data.length - 1) {
           startIndex += 1;
