@@ -8,7 +8,7 @@ const back = getElement("#back");
 const front = getElement("#front");
 
 export default function Pagination(data) {
-  let currentPage = 5;
+  let currentPage = 2;
   let dataPerPage = 10;
   const setCurrentPage = currentPage => {
     const indexOfLastData = currentPage * dataPerPage;

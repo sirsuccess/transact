@@ -1,9 +1,9 @@
 .slider-card {
     border-radius: 30px;
     overflow: hidden;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
     box-shadow: 2px 2px 5px rgb(73, 73, 73);
-    height: 500px;
+    /* height: 500px; */
     text-align: center;
     font-size: 25px;
     font-weight: 800;
@@ -31,6 +31,10 @@
     transition: all;
     transition-duration: 2.5s;
     cursor: zoom-in;
+}
+
+.icons {
+    margin: 1em 0;
 }
 
 /* end of image section */
@@ -153,6 +157,7 @@ textarea {
     border-radius: 18px;
     margin-left: auto;
 }
+
 
 
 

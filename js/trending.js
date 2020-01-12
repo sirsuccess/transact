@@ -24,7 +24,7 @@ let startIndex = 0;
 let IdArray = [];
 export default function Trending() {
   asyncGetArticles(
-    "http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article?page=8&limit=5"
+    "http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article?page=2&limit=5"
   )
     .then(data => {
       DisplayBlock(trendNavigation);

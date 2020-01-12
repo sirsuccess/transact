@@ -277,6 +277,10 @@
   color: #1875f0;
 }
 
+#avatarPreview {
+  display: none;
+}
+
 /* end of trending */
 
 

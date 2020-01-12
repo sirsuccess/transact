@@ -104,16 +104,26 @@ export async function DeleteFetch(url) {
 }
 export async function EditFetch(url, body) {
   return await fetch(url, {
-    method: "DELETE",
+    method: "PUT",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body)
+  });
+}
+export async function PostFetch(url, body) {
+  return await fetch(url, {
+    method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(body)
   });
 }
 
-
 //get date from date
-export function getDateTime(dataString){
+export function getDateTime(dataString) {
   let today = new Date(dataString);
-  let fullDate = today.toString().split(" ").slice(0,5).join();
+  let fullDate = today
+    .toString()
+    .split(" ")
+    .slice(0, 5)
+    .join();
   return fullDate;
 }
