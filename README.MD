@@ -18,3 +18,19 @@ Mock up build for the https://www.etranzact.com/ Frontend test. Powered by Javas
 - Paginations
 - Navbar Toggle
 - Responsive Layout
+
+# Pagination
+
+![transact](./assets/imgs/pagination.PNG)
+
+# Single Article Display
+
+![transact](./assets/imgs/single-img.PNG)
+
+# Comments
+
+![transact](./assets/imgs/comment.PNG)
+
+# Modal
+
+![transact](./assets/imgs/modal.PNG)
