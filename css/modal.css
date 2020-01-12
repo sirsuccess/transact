@@ -78,8 +78,15 @@ form button {
   cursor: pointer;
 }
 
+#avatarPreview {
+  height: 50px;
+  width: 50px;
+
+}
+
+
 @media screen and (max-width: 1000px) {
-   .create-form-img {
+  .create-form-img {
     display: none;
   }
 }
@@ -88,7 +95,8 @@ form button {
   .create-form {
     width: 300px;
   }
-  form{
+
+  form {
     padding: 1em;
     margin: 1em auto;
   }

@@ -25,6 +25,8 @@ const titleInput = getElement("#title");
 const urlInput = getElement("#url");
 const avatarInput = getElement("#avatar");
 const submitBtn = getElement(".submit-btn");
+const preview = getElement("#avatarPreview");
+let imgUrl = "";
 
 //navbar toggle
 Navbar();
@@ -40,7 +42,7 @@ let id = getStorage("articleID");
 
 //get fetch item
 asyncGetArticles(
-  `http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
+  `https://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
 )
   .then(data => {
     setImageAttribute(setImg, data.avatar);
@@ -49,15 +51,17 @@ asyncGetArticles(
     //set the value of input
     titleInput.value = data.title;
     urlInput.value = data.url;
-    avatarInput.value = data.avatar;
+    preview.src = data.avatar;
+    console.log(data);
 
-    //click event for POST
+    //click event for Article Update
     clickEvent(submitBtn, e => {
       e.preventDefault();
+
       let createdAt = Date.now();
       let title = titleInput.value ? titleInput.value : data.title;
       let url = urlInput.value ? urlInput.value : data.url;
-      const avatar = avatarInput.value ? avatarInput.value : data.avatar;
+      const avatar = imgUrl ? imgUrl : data.avatar;
 
       const body = {
         createdAt,
@@ -66,7 +70,7 @@ asyncGetArticles(
         avatar
       };
       EditFetch(
-        `http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`,
+        `https://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`,
         body
       )
         .then(data => {
@@ -86,7 +90,7 @@ asyncGetArticles(
 clickEvent(DeleteTrash, () => {
   if (confirm("Do you want to Delete this Article")) {
     DeleteFetch(
-      `http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
+      `https://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
     )
       .then(data => {
         alert("Delete successful");
@@ -97,5 +101,25 @@ clickEvent(DeleteTrash, () => {
       });
   } else {
     console.log("cancel request");
+  }
+});
+
+//read image file
+avatarInput.addEventListener("change", () => {
+  const file = getElement("input[type=file]").files[0];
+  const reader = new FileReader();
+  reader.addEventListener(
+    "load",
+    function() {
+      DisplayBlock(preview);
+      imgUrl = reader.result;
+      // convert image file to base64 string
+      preview.src = reader.result;
+    },
+    false
+  );
+
+  if (file) {
+    reader.readAsDataURL(file);
   }
 });
