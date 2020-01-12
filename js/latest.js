@@ -16,7 +16,7 @@ const latestLoader = getElement(".latest-loader");
 
 export default function Trending() {
   asyncGetArticles(
-    "http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article"
+    "https://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article"
   )
     .then(data => {
       DisplayNone(latestLoader);
