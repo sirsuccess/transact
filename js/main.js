@@ -5,6 +5,7 @@ import Navbar from "./navbar.js";
 import CurrentDate from "./date.js";
 // import { ImageReader } from "./modules/index.js";
 import PostHandler from "./postArticle.js";
+import registerSW from "./registerSW.js";
 
 Navbar();
 CurrentDate();
@@ -13,3 +14,4 @@ LatestArticle();
 Modal();
 PostHandler();
 // ImageReader();
+registerSW();
