@@ -20,7 +20,7 @@ mock api: http://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article.
   `back` links
 - Clicking on any of the articles would display a single article in a separate page with the
   images and comments. Also add a form to add a new comment to the article.
-- display the images on the article view page as a slider
+- display the images on the article view page as a slider.
 - A form to Create and update article.
 - No frontend Framwork or Library.
 
