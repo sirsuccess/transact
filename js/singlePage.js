@@ -17,6 +17,7 @@ import createNode, {
 import Navbar from "./navbar.js";
 import CurrentDate from "./date.js";
 import Modal from "./modal.js";
+import registerSW from "./registerSW.js";
 
 const setImg = getElement("#sliderImg");
 const sliderText = getElement(".slider-text");
@@ -40,6 +41,7 @@ Modal();
 //get id from session storage
 let id = getStorage("articleID");
 
+registerSW();
 //get fetch item
 asyncGetArticles(
   `https://5e0df4b536b80000143db9ca.mockapi.io/etranzact/v1/article/${id}`
